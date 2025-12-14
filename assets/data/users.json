@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "email": "mish@gmail.com",
+    "name": "Mish",
+    "surname": "TheBoss",
+    "phone": "0812345697",
+    "jobTitle": "CEO, bitch!",
+    "password": "MishyBoy",
+    "role": "administrator"
+  },
+  {
+    "id": 2,
+    "email": "oliver.smith@example.com",
+    "name": "Oliver",
+    "surname": "Smith",
+    "phone": "0812340001",
+    "jobTitle": "Operations Manager",
+    "password": "Passw0rd!",
+    "role": "staff"
+  },
+  {
+    "id": 3,
+    "email": "emma.jones@example.com",
+    "name": "Emma",
+    "surname": "Jones",
+    "phone": "0812340002",
+    "jobTitle": "Sales Lead",
+    "password": "Welcome123",
+    "role": "staff"
+  },
+  {
+    "id": 4,
+    "email": "noah.brown@example.com",
+    "name": "Noah",
+    "surname": "Brown",
+    "phone": "0812340003",
+    "jobTitle": "Product Manager",
+    "password": "Secret!234",
+    "role": "staff"
+  },
+  {
+    "id": 5,
+    "email": "ava.wilson@example.com",
+    "name": "Ava",
+    "surname": "Wilson",
+    "phone": "0812340004",
+    "jobTitle": "Accountant",
+    "password": "Acct2025",
+    "role": "staff"
+  },
+  {
+    "id": 6,
+    "email": "liam.moore@example.com",
+    "name": "Liam",
+    "surname": "Moore",
+    "phone": "0812340005",
+    "jobTitle": "HR Specialist",
+    "password": "Hr#2025",
+    "role": "staff"
+  },
+  {
+    "id": 7,
+    "email": "sophia.taylor@example.com",
+    "name": "Sophia",
+    "surname": "Taylor",
+    "phone": "0812340006",
+    "jobTitle": "Marketing",
+    "password": "Market!ng",
+    "role": "staff"
+  },
+  {
+    "id": 8,
+    "email": "mason.anderson@example.com",
+    "name": "Mason",
+    "surname": "Anderson",
+    "phone": "0812340007",
+    "jobTitle": "Support Engineer",
+    "password": "Support1",
+    "role": "staff"
+  },
+  {
+    "id": 9,
+    "email": "isabella.thomas@example.com",
+    "name": "Isabella",
+    "surname": "Thomas",
+    "phone": "0812340008",
+    "jobTitle": "UX Designer",
+    "password": "Design#9",
+    "role": "staff"
+  },
+  {
+    "id": 10,
+    "email": "jacob.jackson@example.com",
+    "name": "Jacob",
+    "surname": "Jackson",
+    "phone": "0812340009",
+    "jobTitle": "Developer",
+    "password": "DevPass10",
+    "role": "staff"
+  },
+  {
+    "id": 11,
+    "email": "mia.white@example.com",
+    "name": "Mia",
+    "surname": "White",
+    "phone": "0812340010",
+    "jobTitle": "Customer Success",
+    "password": "CSteam11",
+    "role": "staff"
+  },
+  {
+    "id": 12,
+    "email": "ethan.harris@example.com",
+    "name": "Ethan",
+    "surname": "Harris",
+    "phone": "0812340011",
+    "jobTitle": "Logistics",
+    "password": "Logi$12",
+    "role": "staff"
+  },
+  {
+    "id": 13,
+    "email": "amelia.clark@example.com",
+    "name": "Amelia",
+    "surname": "Clark",
+    "phone": "0812340012",
+    "jobTitle": "Office Admin",
+    "password": "Admin13",
+    "role": "staff"
+  },
+  {
+    "id": 14,
+    "email": "william.lewis@example.com",
+    "name": "William",
+    "surname": "Lewis",
+    "phone": "0812340013",
+    "jobTitle": "Finance Analyst",
+    "password": "FinAnal14",
+    "role": "staff"
+  },
+  {
+    "id": 15,
+    "email": "olivia.walker@example.com",
+    "name": "Olivia",
+    "surname": "Walker",
+    "phone": "0812340014",
+    "jobTitle": "PR Manager",
+    "password": "PR@15",
+    "role": "staff"
+  },
+  {
+    "id": 16,
+    "email": "james.hall@example.com",
+    "name": "James",
+    "surname": "Hall",
+    "phone": "0812340015",
+    "jobTitle": "IT Support",
+    "password": "IT4You16",
+    "role": "staff"
+  },
+  {
+    "id": 17,
+    "email": "charlotte.young@example.com",
+    "name": "Charlotte",
+    "surname": "Young",
+    "phone": "0812340016",
+    "jobTitle": "Legal",
+    "password": "Lawyer17",
+    "role": "staff"
+  },
+  {
+    "id": 18,
+    "email": "henry.king@example.com",
+    "name": "Henry",
+    "surname": "King",
+    "phone": "0812340017",
+    "jobTitle": "Security",
+    "password": "Secure18",
+    "role": "staff"
+  },
+  {
+    "id": 19,
+    "email": "ella.wright@example.com",
+    "name": "Ella",
+    "surname": "Wright",
+    "phone": "0812340018",
+    "jobTitle": "Business Analyst",
+    "password": "BizAnal19",
+    "role": "staff"
+  },
+  {
+    "id": 20,
+    "email": "alex.scott@example.com",
+    "name": "Alex",
+    "surname": "Scott",
+    "phone": "0812340019",
+    "jobTitle": "Data Engineer",
+    "password": "Data#20",
+    "role": "staff"
+  },
+  {
+    "id": 21,
+    "email": "Ian@gmail.com",
+    "name": "Ian",
+    "surname": "Marais",
+    "phone": "",
+    "jobTitle": "Rookie",
+    "password": "Ian123",
+    "role": "staff"
+  }
+]

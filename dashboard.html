@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — MishCorp</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
+</head>
+<body class="dashboard">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a class="brand" href="#">
+        <img src="assets/images/logo.png" alt="MishCorp logo" class="brand-logo-img" />
+        <span class="brand-name">MishCorp</span>
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+    <div class="topbar-right">
+      <div class="profile" id="profile">
+        <div class="avatar" id="profileAvatar" aria-hidden="true">--</div>
+        <button class="profile-name" id="profileName" aria-haspopup="true" aria-expanded="false">User ▾</button>
+        <ul class="dropdown" id="profileDropdown" role="menu" aria-label="Profile menu">
+          <li role="menuitem"><a href="#" id="profileLink" data-i18n="profile.menu.profile">Profile</a></li>
+          <li role="menuitem"><a href="#" id="settingsLink" data-i18n="profile.menu.settings">Settings</a></li>
+          <li role="menuitem"><a href="#" id="helpLink" data-i18n="profile.menu.help">Help</a></li>
+          <li class="dropdown-divider" aria-hidden="true"></li>
+          <li class="dropdown-lang">
+            <span class="dropdown-label" data-i18n="profile.menu.language">Language</span>
+            <select id="languageSelect" aria-label="Language">
+              <option value="en">English</option>
+              <option value="af">Afrikaans</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </li>
+          <li class="dropdown-divider" aria-hidden="true"></li>
+          <li role="menuitem"><a href="#" id="logoutBtn" data-i18n="profile.menu.logout">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav class="nav">
+        <ul>
+          <li class="active"><a href="#" data-view="home">Home</a></li>
+          <li><a href="#" data-view="dashboard">Dashboard</a></li>
+          <li><a href="#" data-view="teams">Teams</a></li>
+          <li><a href="#" data-view="inventory">Inventory</a></li>
+          <li><a href="#" data-view="orders">Orders</a></li>
+          <li><a href="#" data-view="invoices">Invoices</a></li>
+          <li><a href="#" data-view="reports">Reports</a></li>
+          <li><a href="#" data-view="finances">Finances</a></li>
+          <li><a href="#" data-view="calendar">Calendar</a></li>
+          <li><a href="#" data-view="tasks">Tasks</a></li>
+          <li><a href="#" data-view="settings">Settings</a></li>
+          <li class="nav-section" data-admin-only="true">Admin Portal</li>
+          <li data-admin-only="true"><a href="#" data-view="users" id="navUsers">User management</a></li>
+          <li data-admin-only="true"><a href="#" data-view="admin-settings">Admin settings</a></li>
+          <li data-admin-only="true"><a href="#" data-view="audit">Audit logs</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="themeToggle" type="button">
+          <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          <span id="themeToggleLabel" data-i18n="theme.label">Dark mode</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="content" id="viewRoot">
+      <!-- Views will be rendered here by JS -->
+      <div data-view="home" class="view">
+        <h1 id="welcomeHeading">Welcome back, <span id="welcomeName">User</span></h1>
+        <p class="lead">Use the left menu to navigate the management console.</p>
+
+        <section class="cards">
+          <article class="card">
+            <h2>Quick stats</h2>
+            <p>Revenue, users, orders and other quick metrics go here.</p>
+          </article>
+          <article class="card">
+            <h2>Recent activity</h2>
+            <p>Recent events, logs or notifications.</p>
+          </article>
+        </section>
+      </div>
+
+      <div data-view="users" class="view" style="display:none">
+        <div class="view-header">
+          <div>
+            <h1>Users</h1>
+            <p class="lead">Manage your organization's users.</p>
+          </div>
+          <button class="btn btn-primary" id="addUserBtn">Add User</button>
+        </div>
+
+        <div class="card card-table">
+          <table class="users-table" id="usersTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Job</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div data-view="inventory" class="view" style="display:none">
+        <h1>Inventory</h1>
+        <p class="lead">Inventory management coming soon.</p>
+      </div>
+
+      <div data-view="orders" class="view" style="display:none">
+        <h1>Orders</h1>
+        <p class="lead">Orders and fulfillment.</p>
+      </div>
+
+      <div data-view="reports" class="view" style="display:none">
+        <h1>Reports</h1>
+        <p class="lead">Business insights and reports.</p>
+      </div>
+
+      <div data-view="settings" class="view" style="display:none">
+        <h1>Settings</h1>
+        <p class="lead">Application and account settings.</p>
+      </div>
+
+      <div data-view="profile" class="view" style="display:none">
+        <h1>My profile</h1>
+        <div class="card profile-card">
+          <div class="profile-card-main">
+            <div class="avatar profile-avatar" id="profilePageAvatar" aria-hidden="true">--</div>
+            <div>
+              <h2 id="profileFullName">User</h2>
+              <p class="profile-role" id="profileRole">Role: Staff Member</p>
+            </div>
+          </div>
+          <dl class="profile-details">
+            <div>
+              <dt>Email</dt>
+              <dd id="profileEmail">-</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd id="profilePhone">-</dd>
+            </div>
+            <div>
+              <dt>Job title</dt>
+              <dd id="profileJob">-</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Add User modal -->
+  <div class="modal-backdrop" id="addUserModal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="addUserTitle">
+      <div class="modal-header">
+        <h2 id="addUserTitle">Add user</h2>
+        <button type="button" class="modal-close" id="addUserClose" aria-label="Close">×</button>
+      </div>
+      <form id="addUserForm" class="modal-body">
+        <div class="field-group">
+          <label for="addUserName">Full name</label>
+          <input type="text" id="addUserName" required placeholder="Mish TheBoss" />
+        </div>
+        <div class="field-group">
+          <label for="addUserEmail">Email</label>
+          <input type="email" id="addUserEmail" required placeholder="you@example.com" />
+        </div>
+        <div class="field-group">
+          <label for="addUserPhone">Phone</label>
+          <input type="tel" id="addUserPhone" placeholder="0812345678" />
+        </div>
+        <div class="field-group">
+          <label for="addUserJob">Job title</label>
+          <input type="text" id="addUserJob" placeholder="Operations Manager" />
+        </div>
+        <div class="field-group">
+          <label for="addUserPassword">Password</label>
+          <input type="password" id="addUserPassword" required placeholder="Temporary password" />
+        </div>
+        <div class="field-group">
+          <label for="addUserType">User type</label>
+          <select id="addUserType">
+            <option value="staff">Staff Member</option>
+            <option value="administrator">Administrator</option>
+          </select>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn" id="addUserCancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save user</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
